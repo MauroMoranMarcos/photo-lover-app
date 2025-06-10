@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">photo-lover-app</string>
+    <string name="home">Página principal</string>
+    <string name="photos1">Fotos 1</string>
+    <string name="photos2">Fotos 2</string>
+    <string name="photos12">Fotos 12</string>
+    <string name="back">Atrás</string>
 </resources>
