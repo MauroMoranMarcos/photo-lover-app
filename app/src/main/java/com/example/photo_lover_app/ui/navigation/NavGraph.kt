@@ -1,10 +1,10 @@
-package com.example.photo_lover_app.navigation
+package com.example.photo_lover_app.ui.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.example.photo_lover_app.screens.HomeScreen
+import com.example.photo_lover_app.ui.home.HomeScreen
 
 object Routes {
     const val HOME = "home"

@@ -1,6 +1,5 @@
-package com.example.photo_lover_app.screens
+package com.example.photo_lover_app.ui.home
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.material.icons.Icons
@@ -10,8 +9,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.compose.ui.res.painterResource
-import com.example.photo_lover_app.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
