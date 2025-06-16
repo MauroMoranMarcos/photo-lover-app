@@ -3,6 +3,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.Icons.Filled
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.CenterAlignedTopAppBar
 import androidx.compose.material3.DrawerValue
@@ -13,6 +14,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ModalDrawerSheet
 import androidx.compose.material3.ModalNavigationDrawer
 import androidx.compose.material3.NavigationDrawerItem
+import androidx.compose.material3.NavigationDrawerItemDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
@@ -22,6 +24,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
@@ -48,23 +51,145 @@ fun PhotoLoverApp(navController: NavHostController = rememberNavController()) {
                 Text(
                     text = stringResource(R.string.menu),
                     modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
-                    style = MaterialTheme.typography.titleMedium
+                    style = MaterialTheme.typography.titleLarge
                 )
                 NavigationDrawerItem(
+                    icon = {
+                        Icon(
+                            imageVector = Icons.Default.Home,
+                            contentDescription = stringResource(R.string.home)
+                        )
+                    },
                     label = { Text(stringResource(R.string.home)) },
                     selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
                     onClick = {
                         navController.navigate(HomeDestination.route)
                         scope.launch { drawerState.close() }
-                    }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
                 )
                 NavigationDrawerItem(
-                    label = { Text(stringResource(R.string.add_reminder)) },
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_menu_photos1),
+                            contentDescription = stringResource(R.string.photos1)
+                        )
+                    },
+                    label = { Text(stringResource(R.string.photos1)) },
                     selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
                     onClick = {
                         navController.navigate(AddReminderDestination.route)
                         scope.launch { drawerState.close() }
-                    }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                )
+                NavigationDrawerItem(
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_menu_photos2),
+                            contentDescription = stringResource(R.string.photos2)
+                        )
+                    },
+                    label = { Text(stringResource(R.string.photos2)) },
+                    selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                    onClick = {
+                        navController.navigate(AddReminderDestination.route)
+                        scope.launch { drawerState.close() }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                )
+                NavigationDrawerItem(
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.ic_menu_photos12),
+                            contentDescription = stringResource(R.string.photos12)
+                        )
+                    },
+                    label = { Text(stringResource(R.string.photos12)) },
+                    selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                    onClick = {
+                        navController.navigate(AddReminderDestination.route)
+                        scope.launch { drawerState.close() }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                )
+                NavigationDrawerItem(
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.baseline_calendar_month_24),
+                            contentDescription = stringResource(R.string.calendar)
+                        )
+                    },
+                    label = { Text(stringResource(R.string.calendar)) },
+                    selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                    onClick = {
+                        navController.navigate(AddReminderDestination.route)
+                        scope.launch { drawerState.close() }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
+                )
+                NavigationDrawerItem(
+                    icon = {
+                        Icon(
+                            painter = painterResource(R.drawable.baseline_campaign_24),
+                            contentDescription = stringResource(R.string.reminders)
+                        )
+                    },
+                    label = { Text(stringResource(R.string.reminders)) },
+                    selected = false,
+                    modifier = Modifier.padding(dimensionResource(R.dimen.padding_medium)),
+                    onClick = {
+                        navController.navigate(AddReminderDestination.route)
+                        scope.launch { drawerState.close() }
+                    },
+                    colors = NavigationDrawerItemDefaults.colors(
+                        selectedContainerColor = MaterialTheme.colorScheme.primary,
+                        unselectedContainerColor = MaterialTheme.colorScheme.primary,
+                        selectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedTextColor = MaterialTheme.colorScheme.onPrimary,
+                        selectedIconColor = MaterialTheme.colorScheme.onPrimary,
+                        unselectedIconColor = MaterialTheme.colorScheme.onPrimary
+                    )
                 )
             }
         }

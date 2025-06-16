@@ -1,8 +1,10 @@
 <resources>
     <string name="home">Página principal</string>
+    <string name="reminders">Recordatorios</string>
     <string name="photos1">Fotos 1</string>
     <string name="photos2">Fotos 2</string>
     <string name="photos12">Fotos 12</string>
+    <string name="calendar">Calendario</string>
     <string name="back_button">Atrás</string>
     <string name="app_name">Photo Lover App</string>
     <string name="add_reminder">Añadir nuevo recordatorio</string>
