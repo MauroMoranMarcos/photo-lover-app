@@ -1,5 +1,6 @@
 package com.example.photo_lover_app.data.db.dao
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
@@ -7,6 +8,7 @@ import androidx.room.Update
 import com.example.photo_lover_app.data.db.entities.Reminder
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface ReminderDao {
 
     @Insert

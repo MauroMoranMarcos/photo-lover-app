@@ -12,15 +12,15 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
-    primary = Purple80,
-    secondary = PurpleGrey80,
-    tertiary = Pink80
+    primary = Pink2,
+    secondary = Pink1,
+    tertiary = Vanilla
 )
 
 private val LightColorScheme = lightColorScheme(
-    primary = Pink1,
-    secondary = Pink2,
-    tertiary = Vanilla
+    primary = PurpleGrey80,
+    secondary = Purple80,
+    tertiary = Pink80
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),
@@ -37,14 +37,16 @@ private val LightColorScheme = lightColorScheme(
 fun PhotoloverappTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
-    dynamicColor: Boolean = true,
+    //dynamicColor: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
+        /*
         dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
+        */
 
         darkTheme -> DarkColorScheme
         else -> LightColorScheme

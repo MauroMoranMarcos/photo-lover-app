@@ -2,8 +2,10 @@ val roomVersion: String by rootProject.extra
 
 plugins {
     alias(libs.plugins.android.application)
-    alias(libs.plugins.kotlin.android)
-    alias(libs.plugins.kotlin.compose)
+    //alias(libs.plugins.kotlin.android)
+    id("org.jetbrains.kotlin.android")
+    //alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.compose")
     id("com.google.devtools.ksp") version "1.9.20-1.0.14"
 }
 
@@ -36,6 +38,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "11"
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.4"
     }
     buildFeatures {
         compose = true

@@ -1,5 +1,6 @@
 package com.example.photo_lover_app.data.db.dao
 
+import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -8,6 +9,7 @@ import androidx.room.Update
 import com.example.photo_lover_app.data.db.entities.User
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)

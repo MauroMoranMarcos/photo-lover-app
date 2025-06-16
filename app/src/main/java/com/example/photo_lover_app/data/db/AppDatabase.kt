@@ -4,14 +4,17 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import com.example.photo_lover_app.data.db.dao.ImageDao
 import com.example.photo_lover_app.data.db.dao.ReminderDao
 import com.example.photo_lover_app.data.db.dao.UserDao
 import com.example.photo_lover_app.data.db.entities.Image
 import com.example.photo_lover_app.data.db.entities.Reminder
 import com.example.photo_lover_app.data.db.entities.User
+import com.example.photo_lover_app.data.db.converters.Coverters
 
 @Database(entities = [User::class, Image::class, Reminder::class], version = 1, exportSchema = false)
+@TypeConverters(Coverters::class)
 abstract class AppDatabase : RoomDatabase() {
 
     abstract fun userDao(): UserDao
